@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>团队介绍</title>
+	<meta charset = "utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+   <link rel="stylesheet" href="http://keleyi.com/keleyi/phtml/jqtexiao/2/stylesheets/jquery.tooltip/jquery.tooltip.css" type="text/css" />
+</head>
+<style type="text/css">
+	.hover-show1{
+  position: absolute;/*注意这两个盒子要设置为绝对定位*/
+  width: 400px;
+  height: 300px;
+  background: #fe4563;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  /*为鼠标移入时显示的那个盒子的显示绑定动画*/
+  -moz-transition:all 1s linear .3s;
+  -webkit-transition:all 1s linear .3s;
+  -o-transition:all 1s linear .3s;
+  -ms-transition:all 1s linear .3s;
+  transition:all 1s linear .3s;
+  -moz-transform:translateX(-100px);
+  -webkit-transform:translateX(-100px);
+  -o-transform:translateX(-100px);
+  transform:translateX(-100px);
+}
+.hover-hidden1{
+  position: absolute;/*注意这两个盒子要设置为绝对定位*/
+  width: 400px;
+  text-align: center;
+  /*为鼠标移入时隐藏的那个盒子的显示绑定动画*/
+  -moz-transition:all 1s ease-out .3s;
+  -webkit-transition:all 1s ease-out .3s;
+  -o-transition:all 1s ease-out .3s;
+  -ms-transition:all 1s ease-out .3s;
+  transition:all 1s ease-out .3s;
+}
+.container-detailed:hover .hover-hidden1{
+ -moz-transform:rotate(90deg) scale(0.5) ;
+  -webkit-transform:rotate(90deg) scale(0.5);
+  -o-transform:rotate(90deg) scale(0.5);
+  transform:rotate(90deg) scale(0.5);
+  opacity: 0;
+}
+.container-detailed:hover .hover-show1{
+  -moz-transform:translateX(0px);
+  -webkit-transform:translateX(0px);
+  -o-transform:translateX(0px);
+  transform:translateX(0px);
+  opacity: 1;
+}
+</style>
+<body>
+<div class="container-detailed">
+	<div class="hover-hidden1">
+		<img src="images/csdn-2.png" class="img-circle" width="280px" height="280px">
+	</div>
+	<div class="hover-show1">
+		<p>某某某   |   安卓开发</p>
+		<p>爱好：骑骑单车，打打游戏</p>
+		<p>联系方式：</p>
+	</div>
+</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>
